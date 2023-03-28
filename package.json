@@ -1,0 +1,32 @@
+{
+  "name": "qr-js",
+  "version": "0.0.1",
+  "description": "QR code encoding in JavaScript.",
+  "type": "module",
+  "main": "./dist/qrcode.js",
+  "module": "./dist/qrcode.esm.js",
+  "browser": "./dist/qrcode.browser.js",
+  "unpkg": "./dist/qrcode.browser.min.js",
+  "jsdelivr": "./dist/qrcode.browser.min.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/qrcode.esm.js",
+      "require": "./dist/qrcode.js"
+    },
+    "./package": "./package.json"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": "https://github.com/scopewu/qrcode.git",
+  "author": "scope.wu <scope.wu@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^3.20.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^5.0.2"
+  }
+}
